@@ -1,0 +1,14 @@
+<br />
+<div class="row mt-5">
+<div class="col-md-4 mb-3" *ngFor='let acad of academics;let i=index'>
+  <div class="card-deck">
+    <div class="card">
+    <!-- <img class="card-img-top" src={{image}}{{i}}{{jpg}} alt="Card image cap"> -->
+    <div class="card-body">
+      <h5 class="card-title">{{acad.name}}: </h5>
+      <p class="card-text">{{acad.data}}</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>

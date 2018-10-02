@@ -1,0 +1,17 @@
+<div class='container mt-5'>
+  <h2>
+    <br>
+  <span class ='title'>Other Facilities</span>
+</h2>
+<hr style="border-color:#ff9900">
+
+<div class='col-md-8' *ngFor='let otherFac of other.slice().reverse()'>
+
+  <h3>{{otherFac.name}}</h3>
+
+  {{otherFac.data}}
+  <br />
+  <br />
+</div>
+
+</div>

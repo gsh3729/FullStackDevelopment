@@ -1,0 +1,76 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+     <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/home"><img src="assets/images/logo.png" class="logosize" /></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item ">
+             <a class="nav-link textsize" routerLink="/home">Home
+               <span class="sr-only">(current)</span>
+             </a>
+           </li>
+
+
+
+           <!-- <div class="btn-group show-on-hover">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Action <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div> -->
+
+
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle textsize" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Academics
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item"  routerLink="/courses">Courses</a>
+               <a class="dropdown-item"  routerLink="/ug-programs">UG Programs</a>
+               <a class="dropdown-item" routerLink="/academic-facilities">Academic Facilities</a>
+             </div>
+      </li>
+            <li class="nav-item">
+              <a class="nav-link textsize" routerLink="/faculty">Faculty</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle textsize" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Facilities
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"  routerLink="/hostel-facilities">Hostel Facilities</a>
+                <a class="dropdown-item"  routerLink="/other-facilities">Other Facilities</a>
+              </div>
+            </li>
+
+           <li class="nav-item">
+             <a class="nav-link textsize" routerLink="/hostels">Hostels</a>
+           </li>
+
+           <li class="nav-item">
+             <a class="nav-link textsize" routerLink="/about">About</a>
+           </li>
+
+           <li class="nav-item" *ngIf='!_auth.loggedIn()'>
+             <a class="nav-link textsize" routerLink="/register">Register</a>
+           </li>
+           <li class="nav-item" *ngIf='!_auth.loggedIn()'>
+             <a class="nav-link textsize" routerLink="/login">LogIn</a>
+           </li>
+           <li class="nav-item" *ngIf='_auth.loggedIn()'>
+             <a class="nav-link textsize"(click)='_auth.loggedOut()' >Logout</a>
+         </ul>
+       </div>
+     </div>
+   </nav>
